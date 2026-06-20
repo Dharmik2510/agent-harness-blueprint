@@ -1,0 +1,15 @@
+{
+  "features": [
+    {
+      "id": "course-v1",
+      "title": "Ship Agent Harness Blueprint v1.0",
+      "status": "done",
+      "acceptance": [
+        "10 modules published in docs/modules",
+        "6 labs with knowledge-hub app",
+        "Templates and validate-harness.sh work",
+        "GitHub Pages deploy workflow present"
+      ]
+    }
+  ]
+}

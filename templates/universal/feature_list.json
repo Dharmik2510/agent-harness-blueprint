@@ -1,0 +1,15 @@
+{
+  "$schema": "./feature_list.schema.json",
+  "features": [
+    {
+      "id": "example-feature",
+      "title": "Example feature — replace me",
+      "status": "open",
+      "acceptance": [
+        "Describe verifiable outcome 1",
+        "Describe verifiable outcome 2",
+        "All verification commands in AGENTS.md pass"
+      ]
+    }
+  ]
+}

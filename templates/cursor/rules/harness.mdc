@@ -1,0 +1,24 @@
+---
+description: Core harness rules for Cursor — points to AGENTS.md
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Harness rules (Cursor)
+
+Read and follow `AGENTS.md` at repo root for full project context.
+
+## Required session flow
+
+1. Run `bash scripts/init.sh` before feature work
+2. Read `PROGRESS.md` and `feature_list.json`
+3. Work on exactly one open feature
+4. Run all verification commands in AGENTS.md before done
+5. Update PROGRESS.md and SESSION_HANDOFF.md at session end
+
+## Constraints
+
+- Do not claim done without verification evidence
+- Do not edit feature_list.json to weaken acceptance criteria
+- Prefer minimal, focused diffs

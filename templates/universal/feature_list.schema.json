@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FeatureList",
+  "type": "object",
+  "required": ["features"],
+  "properties": {
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status", "acceptance"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "status": { "enum": ["open", "in_progress", "done", "blocked"] },
+          "acceptance": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}

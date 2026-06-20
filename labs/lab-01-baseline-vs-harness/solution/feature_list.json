@@ -1,0 +1,14 @@
+{
+  "features": [
+    {
+      "id": "search-highlight",
+      "title": "Highlight search matches in results",
+      "status": "open",
+      "acceptance": [
+        "Matching query text is visually highlighted in results",
+        "npm run lint passes",
+        "npm test passes"
+      ]
+    }
+  ]
+}
