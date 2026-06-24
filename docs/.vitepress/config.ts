@@ -2,23 +2,32 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Agent Harness Blueprint',
-  description: 'Make AI coding agents reliable — a practical course for teams using VS Code Copilot',
+  description: 'Turn VS Code Copilot into a reliable teammate — visual course + hands-on labs',
   base: '/agent-harness-blueprint/',
+  head: [
+    ['link', { rel: 'icon', href: '/agent-harness-blueprint/logo.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'theme-color', content: '#070b14' }],
+    ['meta', { property: 'og:title', content: 'Agent Harness Blueprint' }],
+    ['meta', { property: 'og:description', content: 'Copilot-first harness engineering course with labs and copy-ready templates.' }]
+  ],
+  appearance: 'dark',
   themeConfig: {
+    logo: '/logo.svg',
+    siteTitle: 'Harness Blueprint',
     nav: [
-      { text: 'Start Here', link: '/start-here/glossary' },
-      { text: 'Modules', link: '/modules/m01-when-the-model-is-not-the-problem' },
-      { text: 'Labs', link: '/labs/lab-01-baseline-vs-harness' },
-      { text: 'Resources', link: '/resources/templates' },
-      { text: 'Copilot Guide', link: '/guide/copilot/' },
-      { text: 'GitHub', link: 'https://github.com/Dharmik2510/agent-harness-blueprint' }
+      { text: 'Quick start', link: '/start-here/quick-start' },
+      { text: 'Modules', link: '/modules/' },
+      { text: 'Labs', link: '/labs/' },
+      { text: 'Templates', link: '/resources/templates' },
+      { text: 'Copilot', link: '/guide/copilot/' }
     ],
     sidebar: {
       '/start-here/': [
         {
           text: 'Start Here',
           items: [
-            { text: 'Welcome', link: '/' },
+            { text: 'Home', link: '/' },
+            { text: 'Quick start (15 min)', link: '/start-here/quick-start' },
             { text: 'Glossary', link: '/start-here/glossary' },
             { text: 'Setup: VS Code Copilot', link: '/start-here/setup-copilot' },
             { text: 'Setup: Other Agents', link: '/start-here/setup-other-agents' }
@@ -27,52 +36,59 @@ export default defineConfig({
       ],
       '/modules/': [
         {
-          text: 'Part 1 — Foundations',
+          text: 'Modules',
           items: [
-            { text: 'M01 — When the model is not the problem', link: '/modules/m01-when-the-model-is-not-the-problem' },
-            { text: 'M02 — What a harness really is', link: '/modules/m02-what-a-harness-really-is' },
-            { text: 'M03 — The five pillars', link: '/modules/m03-the-five-pillars' }
+            { text: 'Catalog', link: '/modules/' }
           ]
         },
         {
-          text: 'Part 2 — Workspace Design',
+          text: 'Part 1 — Foundations',
           items: [
-            { text: 'M04 — Your repo is the agent\'s memory', link: '/modules/m04-repo-as-source-of-truth' },
-            { text: 'M05 — Small maps beat giant manuals', link: '/modules/m05-progressive-instructions' },
-            { text: 'M06 — Every session starts the same way', link: '/modules/m06-session-bootstrap' }
+            { text: '01 · Model vs environment', link: '/modules/m01-when-the-model-is-not-the-problem' },
+            { text: '02 · What a harness is', link: '/modules/m02-what-a-harness-really-is' },
+            { text: '03 · Five pillars', link: '/modules/m03-the-five-pillars' }
+          ]
+        },
+        {
+          text: 'Part 2 — Workspace',
+          items: [
+            { text: '04 · Repo as memory', link: '/modules/m04-repo-as-source-of-truth' },
+            { text: '05 · Progressive instructions', link: '/modules/m05-progressive-instructions' },
+            { text: '06 · Session bootstrap', link: '/modules/m06-session-bootstrap' }
           ]
         },
         {
           text: 'Part 3 — Reliability',
           items: [
-            { text: 'M07 — Pick up where you left off', link: '/modules/m07-state-across-sessions' },
-            { text: 'M08 — One task at a time', link: '/modules/m08-scope-and-feature-lists' },
-            { text: 'M09 — Proof beats confidence', link: '/modules/m09-verification-gates' }
+            { text: '07 · State across sessions', link: '/modules/m07-state-across-sessions' },
+            { text: '08 · Scope & features', link: '/modules/m08-scope-and-feature-lists' },
+            { text: '09 · Verification gates', link: '/modules/m09-verification-gates' }
           ]
         },
         {
           text: 'Part 4 — Operations',
           items: [
-            { text: 'M10 — Leave the runway clean', link: '/modules/m10-observability-and-handoff' }
+            { text: '10 · Handoff & observability', link: '/modules/m10-observability-and-handoff' }
           ]
         }
       ],
       '/labs/': [
         {
-          text: 'Hands-on Labs',
+          text: 'Labs',
           items: [
-            { text: 'Lab 01 — Baseline vs harness', link: '/labs/lab-01-baseline-vs-harness' },
-            { text: 'Lab 02 — Agent-readable workspace', link: '/labs/lab-02-agent-readable-workspace' },
-            { text: 'Lab 03 — Multi-session continuity', link: '/labs/lab-03-multi-session-continuity' },
-            { text: 'Lab 04 — Scope control', link: '/labs/lab-04-scope-control' },
-            { text: 'Lab 05 — Verification gates', link: '/labs/lab-05-verification-gates' },
-            { text: 'Lab 06 — Full harness capstone', link: '/labs/lab-06-full-harness-capstone' }
+            { text: 'Lab catalog', link: '/labs/' },
+            { text: '01 · Baseline vs harness', link: '/labs/lab-01-baseline-vs-harness' },
+            { text: '02 · Readable workspace', link: '/labs/lab-02-agent-readable-workspace' },
+            { text: '03 · Multi-session', link: '/labs/lab-03-multi-session-continuity' },
+            { text: '04 · Scope control', link: '/labs/lab-04-scope-control' },
+            { text: '05 · Verification gates', link: '/labs/lab-05-verification-gates' },
+            { text: '06 · Capstone', link: '/labs/lab-06-full-harness-capstone' }
           ]
         }
       ],
       '/resources/': [
         {
-          text: 'Resource Library',
+          text: 'Resources',
           items: [
             { text: 'Templates', link: '/resources/templates' },
             { text: 'Checklists', link: '/resources/checklists' },
@@ -99,7 +115,7 @@ export default defineConfig({
     ],
     search: { provider: 'local' },
     footer: {
-      message: 'Practical harness engineering for teams using VS Code Copilot.',
+      message: 'Copilot-first harness engineering — learn by building.',
       copyright: 'MIT License'
     }
   }

@@ -1,106 +1,92 @@
+<div align="center">
+
+<img src="docs/public/logo.svg" width="96" alt="Agent Harness Blueprint logo" />
+
 # Agent Harness Blueprint
 
-**Make AI coding agents reliable** — a beginner-friendly course for teams using VS Code Copilot (and other agents).
+### Turn VS Code Copilot into a reliable teammate
 
-## 15-minute quick start
+[![Docs site](https://img.shields.io/badge/docs-live-22d3ee?style=for-the-badge)](https://dharmik2510.github.io/agent-harness-blueprint/)
+[![MIT](https://img.shields.io/badge/license-MIT-6366f1?style=for-the-badge)](LICENSE)
+[![Copilot](https://img.shields.io/badge/VS_Code-Copilot-f97316?style=for-the-badge)](docs/start-here/setup-copilot.md)
 
-If you use **VS Code Copilot** on a real project today, do this now:
+**Visual course · 10 modules · 6 hands-on labs · Copy-ready templates**
 
-1. **Open** your repo in VS Code with Copilot Chat enabled.
-2. **Run** `/init` in chat to draft `.github/copilot-instructions.md`.
-3. **Copy** the [Minimal Harness Pack](./templates/universal/) into your project root:
-   - `AGENTS.md` — operating manual for any agent
-   - `PROGRESS.md` — session log
-   - `feature_list.json` — scoped task list
-   - `scripts/init.sh` — install + verify before each session
-4. **Copy** the [Copilot Harness Pack](./templates/copilot/minimal/) into `.github/`.
-5. **Run** `bash scripts/init.sh` before every agent session.
-6. **End** each session with the [Session Handoff](./templates/universal/SESSION_HANDOFF.md) checklist.
+[Start learning](https://dharmik2510.github.io/agent-harness-blueprint/start-here/quick-start) · [Lab 01](https://dharmik2510.github.io/agent-harness-blueprint/labs/lab-01-baseline-vs-harness) · [Templates](./templates/)
 
-Validate your setup:
+</div>
+
+---
+
+## Why this exists
+
+Copilot writes code fast. It also says **"done"** when tests are red, forgets yesterday's session, and refactors three things at once.
+
+**Harness engineering** fixes that — not with longer prompts, but with a **Reliability Loop** built into your repo:
+
+```
+Bootstrap → Scope → Build → Verify → Handoff → (repeat)
+```
+
+## Pick your path
+
+| I want to… | Go here | Time |
+|------------|---------|------|
+| Fix my repo **today** | [15-min quick start](https://dharmik2510.github.io/agent-harness-blueprint/start-here/quick-start) | 15 min |
+| **See proof** it works | [Lab 01 — baseline vs harness](./labs/lab-01-baseline-vs-harness/) | 45 min |
+| **Read** the concepts | [Module catalog](https://dharmik2510.github.io/agent-harness-blueprint/modules/) | ~8 hrs |
+| **Copy files** into a project | [templates/](./templates/) | 5 min |
+
+## The five pillars
+
+<table>
+<tr>
+<td align="center"><b>Instructions</b><br><sub>AGENTS.md · copilot-instructions</sub></td>
+<td align="center"><b>State</b><br><sub>PROGRESS · feature_list</sub></td>
+<td align="center"><b>Verification</b><br><sub>tests · lint · build</sub></td>
+</tr>
+<tr>
+<td align="center"><b>Scope</b><br><sub>one feature at a time</sub></td>
+<td align="center"><b>Lifecycle</b><br><sub>init.sh · handoff</sub></td>
+<td align="center"><a href="https://dharmik2510.github.io/agent-harness-blueprint/"><b>Full course →</b></a></td>
+</tr>
+</table>
+
+## Quick start (local)
 
 ```bash
+git clone https://github.com/Dharmik2510/agent-harness-blueprint.git
+cd agent-harness-blueprint
+npm install && npm run docs:dev
+# → http://localhost:5173/agent-harness-blueprint/
+```
+
+**Drop into your project:**
+
+```bash
+cp -r templates/universal/* /path/to/your/repo/
+cp templates/copilot/minimal/copilot-instructions.md /path/to/your/repo/.github/
 bash scripts/validate-harness.sh /path/to/your/repo
 ```
 
-## What you'll learn
+## What's inside
 
-Harness engineering is **not** prompt engineering. It is designing the system around the model:
+| Folder | What |
+|--------|------|
+| [`docs/`](./docs/) | VitePress course site (modules, labs, Copilot guide) |
+| [`templates/`](./templates/) | Universal + Copilot harness packs |
+| [`labs/knowledge-hub/`](./labs/knowledge-hub/) | React lab app |
+| [`skills/harness-scaffolder/`](./skills/harness-scaffolder/) | Agent skill to scaffold harnesses |
 
-| Pillar | What it does |
-|--------|----------------|
-| **Instructions** | Tell the agent what to do and what to read first |
-| **State** | Persist progress so the next session continues, not restarts |
-| **Verification** | Require proof (tests, lint) before "done" |
-| **Scope** | One feature at a time with explicit definition of done |
-| **Lifecycle** | Bootstrap at start, clean handoff at end |
-
-```text
-  You give a task
-       │
-       ▼
-  Agent reads harness files (instructions, state, scope)
-       │
-       ▼
-  Agent works on ONE scoped item
-       │
-       ▼
-  Agent runs verification ──fail──► fix and retry
-       │ pass
-       ▼
-  Agent updates progress + handoff notes
-```
-
-## Learning path
-
-| Step | Time | What |
-|------|------|------|
-| 1 | ~20 min | [Glossary](./docs/start-here/glossary.md) + [Copilot setup](./docs/start-here/setup-copilot.md) |
-| 2 | ~2 hrs | Modules M01–M03 (foundations) |
-| 3 | ~1 hr | [Lab 01](./labs/lab-01-baseline-vs-harness/) — see the difference |
-| 4 | ~1 week | Modules M04–M10 + Labs 02–06 (part-time) |
-
-**Full docs site:** run `npm install && npm run docs:dev` locally, or visit the GitHub Pages site after deploy.
-
-## Repository layout
-
-```text
-agent-harness-blueprint/
-├── docs/           # VitePress course (modules, labs, guides)
-├── templates/      # Copy-ready harness packs (universal, copilot, cursor)
-├── labs/           # Hands-on lab code (knowledge-hub app)
-├── skills/         # harness-scaffolder agent skill
-└── scripts/        # init.sh, validate-harness.sh
-```
-
-## Scaffold a harness for your project
+## Docs & deploy
 
 ```bash
-npx skills add Dharmik2510/agent-harness-blueprint --skill harness-scaffolder
-```
-
-Or copy templates manually from [`templates/`](./templates/).
-
-## Docs commands
-
-```bash
-npm install
-npm run docs:dev      # local site at http://localhost:5173
+npm run docs:dev      # local preview
 npm run docs:build    # production build
-npm run validate      # score this repo's harness
+npm run validate      # score harness completeness
 ```
 
-## Publish docs (GitHub Pages)
-
-The workflow [`.github/workflows/deploy-docs.yml`](./.github/workflows/deploy-docs.yml) builds VitePress and deploys on every push to `main`.
-
-**One-time setup** (fixes `deploy-pages` 404):
-
-1. Open [Settings → Pages](https://github.com/Dharmik2510/agent-harness-blueprint/settings/pages)
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from branch”)
-3. Re-run the failed workflow or push a commit
-
-Live URL: `https://dharmik2510.github.io/agent-harness-blueprint/`
+Live site: **https://dharmik2510.github.io/agent-harness-blueprint/**
 
 ## License
 
