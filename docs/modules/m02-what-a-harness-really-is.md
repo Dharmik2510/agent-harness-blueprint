@@ -64,7 +64,7 @@ your-repo/
 └── scripts/init.sh
 ```
 
-Copy the pack from [`templates/universal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/universal).
+Copy the pack from [`templates/universal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/universal).
 
 ## Try it
 

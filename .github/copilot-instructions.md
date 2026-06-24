@@ -4,7 +4,7 @@ Follow `AGENTS.md` for project context.
 
 ## Contributing with Copilot
 
-- Maintain original, rephrased content — see ATTRIBUTION.md
+- Maintain original course content in your own words
 - Run `npm run docs:build` before claiming docs changes done
 - Run `bash scripts/validate-harness.sh .` when editing templates
 

@@ -11,7 +11,7 @@ Use when:
 - Same multi-step process runs weekly (release, harness audit, migration)
 - You want `/skill-name` invocation without re-prompting
 
-This repo ships [`harness-scaffolder`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/skills/harness-scaffolder) — scaffolds harness files for new projects.
+This repo ships [`harness-scaffolder`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/skills/harness-scaffolder) — scaffolds harness files for new projects.
 
 Create new skills with `/create-skill` in Copilot Chat.
 
@@ -45,5 +45,5 @@ Harness tip: document MCP usage rules in `copilot-instructions.md` (when to call
 
 ## Related
 
-- [harness-scaffolder skill](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/skills/harness-scaffolder)
+- [harness-scaffolder skill](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/skills/harness-scaffolder)
 - [VS Code customization overview](https://code.visualstudio.com/docs/copilot/customization/overview)

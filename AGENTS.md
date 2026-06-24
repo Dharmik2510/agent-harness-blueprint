@@ -23,7 +23,7 @@ bash scripts/validate-harness.sh .
 
 ## Hard constraints
 
-- Original prose only — do not copy walkinglabs content verbatim
+- All course content must be original prose
 - Every module needs Copilot + universal sections
 - Keep copilot-instructions.md in sync with harness principles
 

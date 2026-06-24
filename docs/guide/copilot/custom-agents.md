@@ -15,7 +15,7 @@ Custom agents are specialized personas in `.github/agents/*.agent.md`.
 
 ## Example: reviewer
 
-Copy from [templates/copilot/minimal/agents/reviewer.agent.md](https://github.com/dharmiksoni/agent-harness-blueprint/blob/main/templates/copilot/minimal/agents/reviewer.agent.md).
+Copy from [templates/copilot/minimal/agents/reviewer.agent.md](https://github.com/Dharmik2510/agent-harness-blueprint/blob/main/templates/copilot/minimal/agents/reviewer.agent.md).
 
 Invoke from Copilot Chat agent picker or `@reviewer` (depending on VS Code version).
 

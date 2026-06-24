@@ -4,7 +4,7 @@ Thank you for helping improve this course.
 
 ## Principles
 
-- **Original prose** — do not copy walkinglabs or other courses verbatim
+- **Original prose** — write in your own words; do not copy other courses verbatim
 - **Beginner-first** — short sentences, glossary links, estimated read times
 - **Copilot-first** — every module needs a "Copilot in practice" section
 - **Actionable** — prefer copy-ready templates over theory alone

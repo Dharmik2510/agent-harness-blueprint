@@ -27,11 +27,11 @@ These work regardless of vendor:
 - `scripts/init.sh` — environment bootstrap
 - `SESSION_HANDOFF.md` — end-of-session checklist
 
-Copy from [`templates/universal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/universal).
+Copy from [`templates/universal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/universal).
 
 ## Cursor
 
-Copy optional mirror from [`templates/cursor/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/cursor):
+Copy optional mirror from [`templates/cursor/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/cursor):
 
 - `.cursor/rules/harness.mdc` — core harness rules
 - Reference `AGENTS.md` from rules to avoid duplication

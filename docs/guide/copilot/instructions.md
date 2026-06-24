@@ -35,7 +35,7 @@ applyTo: "src/api/**"
 - Return RFC 7807 problem+json errors
 ```
 
-Create with `/create-instruction` or copy from [templates](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/copilot/minimal/instructions).
+Create with `/create-instruction` or copy from [templates](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/copilot/minimal/instructions).
 
 ## Frontmatter reference
 

@@ -19,7 +19,7 @@ Copilot uses specific file paths and slash commands. Your org likely already has
 ## Quick start
 
 1. [Setup: VS Code Copilot](/start-here/setup-copilot)
-2. Copy [templates/copilot/minimal](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/copilot/minimal)
+2. Copy [templates/copilot/minimal](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/copilot/minimal)
 3. Run `bash scripts/validate-harness.sh`
 
 ## Deep dives

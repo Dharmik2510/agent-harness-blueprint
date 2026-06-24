@@ -11,7 +11,7 @@ export default defineConfig({
       { text: 'Labs', link: '/labs/lab-01-baseline-vs-harness' },
       { text: 'Resources', link: '/resources/templates' },
       { text: 'Copilot Guide', link: '/guide/copilot/' },
-      { text: 'GitHub', link: 'https://github.com/dharmiksoni/agent-harness-blueprint' }
+      { text: 'GitHub', link: 'https://github.com/Dharmik2510/agent-harness-blueprint' }
     ],
     sidebar: {
       '/start-here/': [
@@ -95,11 +95,11 @@ export default defineConfig({
       ]
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/dharmiksoni/agent-harness-blueprint' }
+      { icon: 'github', link: 'https://github.com/Dharmik2510/agent-harness-blueprint' }
     ],
     search: { provider: 'local' },
     footer: {
-      message: 'Inspired by harness engineering practices. Content is original and rephrased for beginners.',
+      message: 'Practical harness engineering for teams using VS Code Copilot.',
       copyright: 'MIT License'
     }
   }

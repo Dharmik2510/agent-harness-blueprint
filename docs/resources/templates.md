@@ -4,7 +4,7 @@ Copy-ready harness packs. Customize stack versions and verification commands for
 
 ## Minimal Harness Pack (universal)
 
-Path: [`templates/universal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/universal)
+Path: [`templates/universal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/universal)
 
 | File | Purpose |
 |------|---------|
@@ -26,7 +26,7 @@ chmod +x /path/to/your/repo/scripts/init.sh
 
 ## Copilot Harness Pack
 
-Path: [`templates/copilot/minimal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/copilot/minimal)
+Path: [`templates/copilot/minimal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/copilot/minimal)
 
 ```bash
 mkdir -p /path/to/your/repo/.github/instructions /path/to/your/repo/.github/agents
@@ -37,7 +37,7 @@ cp templates/copilot/minimal/agents/*.md /path/to/your/repo/.github/agents/
 
 ## Cursor mirror (optional)
 
-Path: [`templates/cursor/rules/harness.mdc`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/cursor)
+Path: [`templates/cursor/rules/harness.mdc`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/cursor)
 
 ## Validate after copy
 
@@ -48,7 +48,7 @@ bash scripts/validate-harness.sh /path/to/your/repo
 ## Scaffold with skill
 
 ```bash
-npx skills add dharmiksoni/agent-harness-blueprint --skill harness-scaffolder
+npx skills add Dharmik2510/agent-harness-blueprint --skill harness-scaffolder
 ```
 
 Ask the agent: "Scaffold a Copilot harness for this repo."

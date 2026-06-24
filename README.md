@@ -2,8 +2,6 @@
 
 **Make AI coding agents reliable** — a beginner-friendly course for teams using VS Code Copilot (and other agents).
 
-> Inspired by [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering). All content here is **original and rephrased** for clarity — not a fork or translation.
-
 ## 15-minute quick start
 
 If you use **VS Code Copilot** on a real project today, do this now:
@@ -78,7 +76,7 @@ agent-harness-blueprint/
 ## Scaffold a harness for your project
 
 ```bash
-npx skills add dharmiksoni/agent-harness-blueprint --skill harness-scaffolder
+npx skills add Dharmik2510/agent-harness-blueprint --skill harness-scaffolder
 ```
 
 Or copy templates manually from [`templates/`](./templates/).
@@ -92,9 +90,17 @@ npm run docs:build    # production build
 npm run validate      # score this repo's harness
 ```
 
-## Attribution
+## Publish docs (GitHub Pages)
 
-See [ATTRIBUTION.md](./ATTRIBUTION.md). This course synthesizes ideas from OpenAI, Anthropic, Microsoft, and the walkinglabs community — expressed in our own words with Copilot-first guidance.
+The workflow [`.github/workflows/deploy-docs.yml`](./.github/workflows/deploy-docs.yml) builds VitePress and deploys on every push to `main`.
+
+**One-time setup** (fixes `deploy-pages` 404):
+
+1. Open [Settings → Pages](https://github.com/Dharmik2510/agent-harness-blueprint/settings/pages)
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from branch”)
+3. Re-run the failed workflow or push a commit
+
+Live URL: `https://dharmik2510.github.io/agent-harness-blueprint/`
 
 ## License
 

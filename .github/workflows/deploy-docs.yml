@@ -1,5 +1,12 @@
 name: Deploy docs to GitHub Pages
 
+# Builds VitePress static site and publishes to GitHub Pages via the official
+# Actions deploy path (OIDC — no gh-pages branch commits in git history).
+#
+# ONE-TIME SETUP (required or deploy job returns 404):
+#   Repo → Settings → Pages → Build and deployment → Source: "GitHub Actions"
+#   https://github.com/Dharmik2510/agent-harness-blueprint/settings/pages
+
 on:
   push:
     branches: [main]
@@ -21,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run docs:build

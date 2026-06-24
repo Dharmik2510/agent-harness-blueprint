@@ -63,7 +63,7 @@ scripts/init.sh
 ### Copilot quick-start (copy this workflow)
 
 1. Open repo → run `/init` in Copilot Chat
-2. Merge with [`templates/copilot/minimal/copilot-instructions.md`](https://github.com/dharmiksoni/agent-harness-blueprint/blob/main/templates/copilot/minimal/copilot-instructions.md)
+2. Merge with [`templates/copilot/minimal/copilot-instructions.md`](https://github.com/Dharmik2510/agent-harness-blueprint/blob/main/templates/copilot/minimal/copilot-instructions.md)
 3. Copy universal templates
 4. `bash scripts/init.sh`
 5. End every session with `SESSION_HANDOFF.md` checklist

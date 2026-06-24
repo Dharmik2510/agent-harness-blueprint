@@ -38,7 +38,7 @@ Review and edit the generated `.github/copilot-instructions.md`. Keep it under ~
 
 ### Step 2 — Add universal harness files
 
-Copy from this repo's [`templates/universal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/universal):
+Copy from this repo's [`templates/universal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/universal):
 
 - `AGENTS.md`
 - `PROGRESS.md`
@@ -49,7 +49,7 @@ Customize stack versions and verification commands for your project.
 
 ### Step 3 — Add Copilot-specific files
 
-Copy from [`templates/copilot/minimal/`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/copilot/minimal):
+Copy from [`templates/copilot/minimal/`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/copilot/minimal):
 
 - `.github/copilot-instructions.md` (merge with `/init` output if needed)
 - `.github/instructions/tests.instructions.md` (example scoped rules)

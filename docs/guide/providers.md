@@ -39,7 +39,7 @@ Harness pillars are **tool-agnostic**. Only file locations and feature names dif
 
 ## Universal files (all tools)
 
-Copy from [`templates/universal`](https://github.com/dharmiksoni/agent-harness-blueprint/tree/main/templates/universal):
+Copy from [`templates/universal`](https://github.com/Dharmik2510/agent-harness-blueprint/tree/main/templates/universal):
 
 - `PROGRESS.md`
 - `feature_list.json`
