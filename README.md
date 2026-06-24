@@ -14,6 +14,8 @@
 
 [Start learning](https://dharmik2510.github.io/agent-harness-blueprint/start-here/quick-start) · [Lab 01](https://dharmik2510.github.io/agent-harness-blueprint/labs/lab-01-baseline-vs-harness) · [Templates](./templates/)
 
+<img src="docs/public/promo.gif" width="720" alt="Agent Harness Blueprint — Reliability Loop promo animation" />
+
 </div>
 
 ---
@@ -87,6 +89,8 @@ npm run validate      # score harness completeness
 ```
 
 Live site: **https://dharmik2510.github.io/agent-harness-blueprint/**
+
+Regenerate promo GIF: `npm run promo:gif` (requires `.venv-promo` — run once: `python3 -m venv .venv-promo && .venv-promo/bin/pip install pillow`)
 
 ## License
 

@@ -40,6 +40,14 @@ features:
     details: Org-wide Copilot instructions, pilot plan, and metrics that matter for engineering managers.
 ---
 
+<div style="text-align:center;margin:1.5rem auto 2rem;max-width:720px">
+
+![Course promo](/promo.gif)
+
+*5-second overview — Reliability Loop, five pillars, 15-minute quick start*
+
+</div>
+
 ## Pick your path
 
 <div class="ahb-bento">
