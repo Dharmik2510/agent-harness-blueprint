@@ -31,6 +31,8 @@ const pillars = computed(() =>
 )
 
 const weakest = computed(() => {
+  // No weakest link once every criterion is satisfied.
+  if (total.value >= rubric.maxScore) return null
   let w = null
   for (const p of pillars.value) {
     if (!w || p.ratio < w.ratio) w = p

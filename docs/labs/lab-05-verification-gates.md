@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -51,7 +51,7 @@ Carry in the Lab 04 harness. Add the feature you'll gate:
 ## Part A — Find the verification gap
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Read the ✅ row. Tests already exist (5 pts). The two cheap wins are usually the **explicit gate rule** and the **CI workflow**. Note your current Verification sub-score.
@@ -114,7 +114,7 @@ A harnessed agent runs the checks, sees the failure, and **refuses to claim done
 ## Verify your gain
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected: ✅ **Verification 20/20**.

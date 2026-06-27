@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -53,7 +53,7 @@ Carry in the Lab 02 harness. Add the feature you'll build across two sessions:
 Score and read the 🧠 row:
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 You likely have PROGRESS.md and feature_list.json from earlier labs (10 pts), but **no SESSION_HANDOFF.md** and maybe no explicit next step — that's the 10 points you're leaving on the table. To feel why it matters: start a feature, then close the chat. A new chat has no idea what you did or what's next.
@@ -125,7 +125,7 @@ If session 2 picks up correctly without re-exploring the whole repo, your state 
 ## Verify your gain
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected: 🧠 **State 20/20**.

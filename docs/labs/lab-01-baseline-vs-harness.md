@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -36,7 +36,7 @@ Knowledge Hub is a Vite + React app. Search logic lives in `src/lib/search.ts` (
 4. Now score the bare repo:
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 You'll see roughly:
@@ -128,7 +128,7 @@ Now re-run Copilot with the **Harness** prompt below. It points at the files you
 Re-score:
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected per-pillar delta from the four files:

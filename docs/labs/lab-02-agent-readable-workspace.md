@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -38,7 +38,7 @@ Continue in the same app from Lab 01. If you skipped it, create the four Lab 01 
 Score and look only at the 📜 row:
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 If your AGENTS.md is missing a section, balloons past 200 lines, or has no must/never language, you'll lose 5 points per gap. The "Fix next" list tells you exactly which criterion is unmet. Note your current Instructions sub-score.
@@ -125,7 +125,7 @@ then `feature_list.json`, then `docs/architecture.md`.
 ## Verify your gain
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected: 📜 **Instructions 20/20**.

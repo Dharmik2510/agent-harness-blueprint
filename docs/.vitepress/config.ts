@@ -29,7 +29,8 @@ export default withMermaid(defineConfig({
       { text: 'Quick start', link: '/start-here/quick-start' },
       { text: 'Modules', link: '/modules/' },
       { text: 'Labs', link: '/labs/' },
-      { text: 'Templates', link: '/resources/templates' }
+      { text: 'Templates', link: '/resources/templates' },
+      { text: 'Copilot guide', link: '/guide/copilot/' }
     ],
     sidebar: {
       '/diagnose': [

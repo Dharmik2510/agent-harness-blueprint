@@ -47,13 +47,13 @@ Keep it short. The per-repo instructions file then adds only what's specific to 
 
 ```mermaid
 flowchart LR
-  A[Pick 1 repo] --> B[Score it<br/>npx harness-score .]
+  A[Pick 1 repo] --> B[Score it<br/>/diagnose]
   B --> C[Add the harness<br/>1-2 weeks]
   C --> D[Re-score]
   D --> E[Share before/after<br/>with the team]
 ```
 
-Score it on day one (`npx harness-score .` or `/diagnose`). Add the harness over a sprint. Re-score. Then show the team the before/after — a 35 that became an 85 is the most persuasive slide you'll ever present.
+Score it on day one (open [/diagnose](/diagnose), or `npm run score -- <path>` from a clone of this repo). Add the harness over a sprint. Re-score. Then show the team the before/after — a 35 that became an 85 is the most persuasive slide you'll ever present.
 
 **3. Measure what managers actually care about.** Engineering leaders don't fund "better vibes." Track outcomes:
 
@@ -85,7 +85,7 @@ When the good setup is the default setup, adoption stops being a campaign and be
 
 ## Try it
 
-1. Pick **one** repo and score it now: `npx harness-score .` (or [/diagnose](/diagnose)). Write the number down.
+1. Pick **one** repo and score it now: [/diagnose](/diagnose) (or `npm run score -- <path>` from a clone of this repo). Write the number down.
 2. Spend a sprint bringing it up — close the lowest pillar first.
 3. Re-score, and capture before/after for one outcome metric (start with rework rate or time-to-green).
 4. Create a starter template from the repo so the next project inherits the win.
@@ -113,7 +113,7 @@ You started where most people stop — blaming the model — and you walked the 
 
 Two things to do with what you've learned:
 
-- **Re-score your repos.** Run [/diagnose](/diagnose) (or `npx harness-score .`) and watch the number climb as you apply each pillar. Close the lowest one first.
+- **Re-score your repos.** Run [/diagnose](/diagnose) (or `npm run score`) and watch the number climb as you apply each pillar. Close the lowest one first.
 - **Practice for real.** Head to the [Labs](/labs/) and build the muscle memory — bootstrap scripts, state files, verification gates, scope contracts, clean handoffs — on actual repos.
 
 The model was never the problem. Now you have the harness. Go make your agents reliable.

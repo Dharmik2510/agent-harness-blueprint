@@ -47,9 +47,6 @@ export function scoreRepo(root, rubric) {
     }
   })
 
-  // Weakest pillar: lowest ratio, then lowest absolute score, then rubric order.
-  const weakest = [...pillars].sort((a, b) => a.ratio - b.ratio || a.score - b.score)[0] || null
-
   const gaps = pillars.flatMap((p) =>
     p.criteria.filter((c) => !c.satisfied).map((c) => ({
       pillar: p.name,
@@ -59,6 +56,12 @@ export function scoreRepo(root, rubric) {
       fixLink: c.fixLink,
     })),
   )
+
+  // Weakest pillar: lowest ratio, then lowest score, then rubric order.
+  // Null when everything is satisfied — a perfect harness has no weakest link.
+  const weakest = gaps.length
+    ? [...pillars].sort((a, b) => a.ratio - b.ratio || a.score - b.score)[0]
+    : null
 
   return {
     total,

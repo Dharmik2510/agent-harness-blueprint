@@ -57,8 +57,10 @@ You can't improve what you don't measure. The **Harness Scorecard** grades any r
 </div>
 
 ```bash
-# Or grade a real repo right now:
-npx --yes harness-score .
+# Prefer the terminal? Score any repo from a clone of this course:
+git clone https://github.com/Dharmik2510/agent-harness-blueprint
+cd agent-harness-blueprint && npm install
+npm run score -- /path/to/your/repo
 ```
 
 ## One path, four stages

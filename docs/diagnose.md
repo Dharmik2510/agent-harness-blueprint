@@ -10,7 +10,9 @@ Before you read a single module, find out where your repo actually stands. Answe
 This quiz is your self-assessment. When you're ready for hard proof, run the **same rubric** against your real repo:
 
 ```bash
-npx --yes harness-score .        # or, in this repo: npm run score -- /path/to/repo
+git clone https://github.com/Dharmik2510/agent-harness-blueprint
+cd agent-harness-blueprint && npm install
+npm run score -- /path/to/your/repo     # graded report + per-pillar bars
 ```
 :::
 

@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -36,7 +36,7 @@ Carry in the Lab 05 harness. By now you should have AGENTS.md, copilot-instructi
 ## Part A — Find the last gap
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Look at the 🔁 Lifecycle row — it's usually the last pillar trailing. Earlier labs gave you the handoff checklist and state pointers; what's typically missing is a **bootstrap script** and a **documented start/end ritual**. Note your total.
@@ -119,7 +119,7 @@ Follow AGENTS.md end to end.
 ## Verify your gain
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected: **90+/100 — Production harness**, with every pillar at or near 20:
@@ -170,4 +170,4 @@ under 20, name the exact missing file or rule and the one-line fix.
 
 ## Congratulations
 
-You built a production-style agent harness from 5/100 to 90+. Copy these files into your team's repos, run `npx harness-score .` on them, and share [setup-copilot](../start-here/setup-copilot) with colleagues to roll the loop out at work.
+You built a production-style agent harness from 5/100 to 90+. Copy these files into your team's repos, run `npm run score` on them, and share [setup-copilot](../start-here/setup-copilot) with colleagues to roll the loop out at work.

@@ -7,7 +7,7 @@
 Run before and after:
 ```bash
 cd labs/knowledge-hub
-npx --yes harness-score .
+npm run score
 ```
 :::
 
@@ -108,7 +108,7 @@ Now re-run the trap prompt. The agent should implement `empty-state-message` onl
 ## Verify your gain
 
 ```bash
-npx --yes harness-score .
+npm run score
 ```
 
 Expected: 🎯 **Scope 20/20**.

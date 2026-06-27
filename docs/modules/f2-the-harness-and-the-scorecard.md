@@ -74,10 +74,10 @@ That weakest pillar is the most valuable sentence in this course. It tells you *
 The score is a proxy for "how reliably can an agent finish real work here." Going from 40 to 75 is the difference between fighting the agent and trusting it on a long task. The number is the means; reliability is the end.
 :::
 
-**Score yours now → [/diagnose](/diagnose)** (interactive), or from your terminal:
+**Score yours now → [/diagnose](/diagnose)** (interactive, zero-install), or from your terminal with a clone of this repo:
 
 ```bash
-npx harness-score .
+npm run score -- /path/to/your/repo
 ```
 
 This whole course is built around moving that number: **Diagnose → Learn → Build → Prove.** You diagnose to find the weakest pillar, learn the pattern for it, build it into your repo, and prove the score went up.
