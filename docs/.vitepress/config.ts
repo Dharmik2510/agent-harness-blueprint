@@ -1,6 +1,15 @@
 import { defineConfig } from 'vitepress'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        '@rubric': fileURLToPath(new URL('../../scorecard/rubric.json', import.meta.url)),
+      },
+    },
+    server: { fs: { allow: ['..'] } },
+  },
   title: 'Agent Harness Blueprint',
   description: 'Turn VS Code Copilot into a reliable teammate — visual course + hands-on labs',
   base: '/agent-harness-blueprint/',
@@ -15,18 +24,29 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: 'Harness Blueprint',
     nav: [
+      { text: 'Score your repo', link: '/diagnose' },
       { text: 'Quick start', link: '/start-here/quick-start' },
       { text: 'Modules', link: '/modules/' },
       { text: 'Labs', link: '/labs/' },
-      { text: 'Templates', link: '/resources/templates' },
-      { text: 'Copilot', link: '/guide/copilot/' }
+      { text: 'Templates', link: '/resources/templates' }
     ],
     sidebar: {
+      '/diagnose': [
+        {
+          text: '① Diagnose',
+          items: [
+            { text: 'Score your repo', link: '/diagnose' },
+            { text: 'Quick start (15 min)', link: '/start-here/quick-start' },
+            { text: 'Glossary', link: '/start-here/glossary' }
+          ]
+        }
+      ],
       '/start-here/': [
         {
-          text: 'Start Here',
+          text: '① Diagnose & start here',
           items: [
             { text: 'Home', link: '/' },
+            { text: 'Score your repo', link: '/diagnose' },
             { text: 'Quick start (15 min)', link: '/start-here/quick-start' },
             { text: 'Glossary', link: '/start-here/glossary' },
             { text: 'Setup: VS Code Copilot', link: '/start-here/setup-copilot' },

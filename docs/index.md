@@ -10,14 +10,14 @@ hero:
     alt: Agent Harness Blueprint
   actions:
     - theme: brand
+      text: Score your repo (2 min)
+      link: /diagnose
+    - theme: alt
       text: Start the 15-min quick start
       link: /start-here/quick-start
     - theme: alt
       text: Jump into Lab 01
       link: /labs/lab-01-baseline-vs-harness
-    - theme: alt
-      text: Copy templates
-      link: /resources/templates
 
 features:
   - icon: "🎯"
@@ -47,6 +47,19 @@ features:
 *5-second overview — Reliability Loop, five pillars, 15-minute quick start*
 
 </div>
+
+## Start by measuring
+
+You can't improve what you don't measure. The **Harness Scorecard** grades any repo against the five pillars — in the browser, or against a real repo from your terminal. Every module and lab is tied to it, so learning visibly moves the number.
+
+<div style="text-align:center;margin:1rem auto 0">
+  <a class="ahb-score-cta" href="./diagnose">🩺 Score your repo in 2 minutes →</a>
+</div>
+
+```bash
+# Or grade a real repo right now:
+npx --yes harness-score .
+```
 
 ## Pick your path
 

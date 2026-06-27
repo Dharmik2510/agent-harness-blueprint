@@ -217,6 +217,24 @@
   color: var(--vp-c-text-2);
 }
 
+/* Scorecard CTA */
+.ahb-score-cta {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  color: #04121a !important;
+  background: linear-gradient(135deg, #22d3ee, #818cf8);
+  box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ahb-score-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(129, 140, 248, 0.7);
+}
+
 /* Nav polish */
 .VPNavBarTitle .title {
   font-weight: 700;
