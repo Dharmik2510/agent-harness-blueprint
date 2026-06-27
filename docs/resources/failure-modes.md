@@ -29,5 +29,5 @@ After 3–5 loops, reliability should stabilize for that task class.
 
 ## Related
 
-- [M01 — When the model is not the problem](../modules/m01-when-the-model-is-not-the-problem)
+- [M01 — When the model is not the problem](../modules/f1-when-the-model-is-not-the-problem)
 - [validate-harness.sh](https://github.com/Dharmik2510/agent-harness-blueprint/blob/main/scripts/validate-harness.sh)

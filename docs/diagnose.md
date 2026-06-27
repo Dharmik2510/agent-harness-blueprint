@@ -28,7 +28,7 @@ npx --yes harness-score .        # or, in this repo: npm run score -- /path/to/r
 ## Where to go next
 
 - Lowest pillar? Click **"Learn this →"** above — it deep-links to the exact lesson.
-- New to all of this? Start with the [module track](./modules/).
+- New to all of this? Start with [Module F1 — When the model isn't the problem](./modules/f1-when-the-model-is-not-the-problem).
 - Want to build, not read? Jump into [Lab 01](./labs/lab-01-baseline-vs-harness).
 
 Then come back and re-score. The number going up *is* the proof.

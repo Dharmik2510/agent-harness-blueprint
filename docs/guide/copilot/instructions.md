@@ -52,5 +52,5 @@ Create with `/create-instruction` or copy from [templates](https://github.com/Dh
 
 ## Related
 
-- [M05 — Small maps beat giant manuals](../../modules/m05-progressive-instructions)
+- [M05 — Small maps beat giant manuals](../../modules/p1-instructions)
 - [Provider comparison](../providers)

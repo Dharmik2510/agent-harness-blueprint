@@ -56,39 +56,33 @@ export default defineConfig({
       ],
       '/modules/': [
         {
-          text: 'Modules',
+          text: '② Learn',
           items: [
-            { text: 'Catalog', link: '/modules/' }
+            { text: 'Module catalog', link: '/modules/' }
           ]
         },
         {
-          text: 'Part 1 — Foundations',
+          text: 'Foundations',
           items: [
-            { text: '01 · Model vs environment', link: '/modules/m01-when-the-model-is-not-the-problem' },
-            { text: '02 · What a harness is', link: '/modules/m02-what-a-harness-really-is' },
-            { text: '03 · Five pillars', link: '/modules/m03-the-five-pillars' }
+            { text: 'F1 · When the model isn’t the problem', link: '/modules/f1-when-the-model-is-not-the-problem' },
+            { text: 'F2 · The harness & the scorecard', link: '/modules/f2-the-harness-and-the-scorecard' }
           ]
         },
         {
-          text: 'Part 2 — Workspace',
+          text: 'The five pillars',
           items: [
-            { text: '04 · Repo as memory', link: '/modules/m04-repo-as-source-of-truth' },
-            { text: '05 · Progressive instructions', link: '/modules/m05-progressive-instructions' },
-            { text: '06 · Session bootstrap', link: '/modules/m06-session-bootstrap' }
+            { text: 'P1 · 📜 Instructions', link: '/modules/p1-instructions' },
+            { text: 'P2 · 🧠 State', link: '/modules/p2-state' },
+            { text: 'P3 · ✅ Verification', link: '/modules/p3-verification' },
+            { text: 'P4 · 🎯 Scope', link: '/modules/p4-scope' },
+            { text: 'P5 · 🔁 Lifecycle', link: '/modules/p5-lifecycle' }
           ]
         },
         {
-          text: 'Part 3 — Reliability',
+          text: 'Operations',
           items: [
-            { text: '07 · State across sessions', link: '/modules/m07-state-across-sessions' },
-            { text: '08 · Scope & features', link: '/modules/m08-scope-and-feature-lists' },
-            { text: '09 · Verification gates', link: '/modules/m09-verification-gates' }
-          ]
-        },
-        {
-          text: 'Part 4 — Operations',
-          items: [
-            { text: '10 · Handoff & observability', link: '/modules/m10-observability-and-handoff' }
+            { text: 'O1 · Observability & handoff', link: '/modules/o1-observability-and-handoff' },
+            { text: 'O2 · Team rollout', link: '/modules/o2-team-rollout' }
           ]
         }
       ],

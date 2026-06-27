@@ -1,5 +1,7 @@
 # Lab 01 — Baseline vs harness
 
+> Scorecard framing: score the app with `npx harness-score .` (~5/100), add a minimal harness, re-score (~30/100). Full write-up: [docs/labs/lab-01-baseline-vs-harness.md](../../docs/labs/lab-01-baseline-vs-harness.md).
+
 Hands-on comparison for the Knowledge Hub app.
 
 ## Setup

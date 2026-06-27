@@ -74,7 +74,7 @@ npx --yes harness-score .
 <a class="ahb-card" href="./modules/">
   <span class="ahb-pill">~8 hrs read</span>
   <strong>Module track</strong>
-  <span>10 short chapters from “why agents fail” to full harness design.</span>
+  <span>9 short chapters from “why agents fail” to full harness design.</span>
 </a>
 
 <a class="ahb-card" href="./labs/lab-01-baseline-vs-harness">
@@ -129,10 +129,10 @@ Think of Copilot as a fast intern with amnesia. Your harness is the **onboarding
 | Copy-ready template packs | Theory only |
 | Side-by-side lab comparisons | Single happy-path demo |
 | Failure mode lookup table | Blame the model |
-| 10 focused modules (~8 min each) | Marathon lecture series |
+| 9 focused modules (~8 min each) | Marathon lecture series |
 
 ## New here?
 
 1. [Glossary](./start-here/glossary) — plain-language terms
 2. [Quick start](./start-here/quick-start) — working harness in 15 minutes
-3. [Module 01](./modules/m01-when-the-model-is-not-the-problem) — why capability ≠ reliability
+3. [Module F1](./modules/f1-when-the-model-is-not-the-problem) — why capability ≠ reliability
