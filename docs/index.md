@@ -10,14 +10,14 @@ hero:
     alt: Agent Harness Blueprint
   actions:
     - theme: brand
+      text: Score your repo (2 min)
+      link: /diagnose
+    - theme: alt
       text: Start the 15-min quick start
       link: /start-here/quick-start
     - theme: alt
       text: Jump into Lab 01
       link: /labs/lab-01-baseline-vs-harness
-    - theme: alt
-      text: Copy templates
-      link: /resources/templates
 
 features:
   - icon: "🎯"
@@ -48,47 +48,36 @@ features:
 
 </div>
 
-## Pick your path
+## Start by measuring
 
-<div class="ahb-bento">
+You can't improve what you don't measure. The **Harness Scorecard** grades any repo against the five pillars — in the browser, or against a real repo from your terminal. Every module and lab is tied to it, so learning visibly moves the number.
 
-<a class="ahb-card" href="./start-here/quick-start">
-  <span class="ahb-pill">15 minutes</span>
-  <strong>Quick start</strong>
-  <span>Copy templates, run validate, fix your repo today.</span>
-</a>
-
-<a class="ahb-card" href="./modules/">
-  <span class="ahb-pill">~8 hrs read</span>
-  <strong>Module track</strong>
-  <span>10 short chapters from “why agents fail” to full harness design.</span>
-</a>
-
-<a class="ahb-card" href="./labs/lab-01-baseline-vs-harness">
-  <span class="ahb-pill">Hands-on</span>
-  <strong>Lab track</strong>
-  <span>Build muscle memory on the Knowledge Hub app.</span>
-</a>
-
-<a class="ahb-card" href="./guide/copilot/">
-  <span class="ahb-pill">Copilot deep dive</span>
-  <strong>VS Code guide</strong>
-  <span>Instructions, agents, skills, hooks, and org rollout.</span>
-</a>
-
+<div style="text-align:center;margin:1rem auto 0">
+  <a class="ahb-score-cta" href="./diagnose">🩺 Score your repo in 2 minutes →</a>
 </div>
+
+```bash
+# Prefer the terminal? Score any repo from a clone of this course:
+git clone https://github.com/Dharmik2510/agent-harness-blueprint
+cd agent-harness-blueprint && npm install
+npm run score -- /path/to/your/repo
+```
+
+## One path, four stages
+
+This isn't a reading list — it's a measurable loop. Diagnose where you stand, learn the pillar that hurts, build it for real, then prove the gain.
+
+<Journey />
+
+## The five pillars
+
+Every score, module, and lab maps to these five. Click any pillar to jump to its chapter.
+
+<Pillars />
 
 ## The Reliability Loop
 
-Most agent failures are not “bad model” problems. They are **missing systems** problems.
-
-<div class="ahb-pillars">
-  <div class="ahb-pillar"><div class="ahb-pillar-num">1</div><div class="ahb-pillar-label">Bootstrap</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">2</div><div class="ahb-pillar-label">Scope</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">3</div><div class="ahb-pillar-label">Build</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">4</div><div class="ahb-pillar-label">Verify</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">5</div><div class="ahb-pillar-label">Handoff</div></div>
-</div>
+Most agent failures are not “bad model” problems. They are **missing systems** problems — a rhythm the agent repeats every session.
 
 ```mermaid
 flowchart LR
@@ -116,10 +105,10 @@ Think of Copilot as a fast intern with amnesia. Your harness is the **onboarding
 | Copy-ready template packs | Theory only |
 | Side-by-side lab comparisons | Single happy-path demo |
 | Failure mode lookup table | Blame the model |
-| 10 focused modules (~8 min each) | Marathon lecture series |
+| 9 focused modules (~8 min each) | Marathon lecture series |
 
 ## New here?
 
 1. [Glossary](./start-here/glossary) — plain-language terms
 2. [Quick start](./start-here/quick-start) — working harness in 15 minutes
-3. [Module 01](./modules/m01-when-the-model-is-not-the-problem) — why capability ≠ reliability
+3. [Module F1](./modules/f1-when-the-model-is-not-the-problem) — why capability ≠ reliability

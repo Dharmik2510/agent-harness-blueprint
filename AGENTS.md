@@ -26,6 +26,8 @@ bash scripts/validate-harness.sh .
 - All course content must be original prose
 - Every module needs Copilot + universal sections
 - Keep copilot-instructions.md in sync with harness principles
+- Work on one feature at a time — see `feature_list.json`; do not start a second until the first is done
+- Do not mark work done until `npm run docs:build` and `npm test` pass
 
 ## Doc map
 

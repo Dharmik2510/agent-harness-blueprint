@@ -1,0 +1,36 @@
+---
+title: Score your repo
+---
+
+# Score your repo in 2 minutes
+
+Before you read a single module, find out where your repo actually stands. Answer these honestly — one checkbox per criterion — and watch your **Harness Score** build in real time. The result links you straight to the lessons that close your biggest gaps.
+
+::: tip One rubric, two ways to measure
+This quiz is your self-assessment. When you're ready for hard proof, run the **same rubric** against your real repo:
+
+```bash
+git clone https://github.com/Dharmik2510/agent-harness-blueprint
+cd agent-harness-blueprint && npm install
+npm run score -- /path/to/your/repo     # graded report + per-pillar bars
+```
+:::
+
+<Scorecard />
+
+## What the score means
+
+| Band | Score | What it feels like |
+|------|-------|--------------------|
+| **Prompt-only** | 0–39 | The agent is guessing. It forgets, drifts, and claims done on red. |
+| **Partial harness** | 40–69 | Some scaffolding — but gaps still let sessions go sideways. |
+| **Reliable harness** | 70–89 | Sessions finish the right task with proof. |
+| **Production harness** | 90–100 | A teammate-grade workspace. |
+
+## Where to go next
+
+- Lowest pillar? Click **"Learn this →"** above — it deep-links to the exact lesson.
+- New to all of this? Start with [Module F1 — When the model isn't the problem](./modules/f1-when-the-model-is-not-the-problem).
+- Want to build, not read? Jump into [Lab 01](./labs/lab-01-baseline-vs-harness).
+
+Then come back and re-score. The number going up *is* the proof.

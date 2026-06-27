@@ -1,6 +1,16 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
+import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        '@rubric': fileURLToPath(new URL('../../scorecard/rubric.json', import.meta.url)),
+      },
+    },
+    server: { fs: { allow: ['..'] } },
+  },
   title: 'Agent Harness Blueprint',
   description: 'Turn VS Code Copilot into a reliable teammate — visual course + hands-on labs',
   base: '/agent-harness-blueprint/',
@@ -15,18 +25,30 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: 'Harness Blueprint',
     nav: [
+      { text: 'Score your repo', link: '/diagnose' },
       { text: 'Quick start', link: '/start-here/quick-start' },
       { text: 'Modules', link: '/modules/' },
       { text: 'Labs', link: '/labs/' },
       { text: 'Templates', link: '/resources/templates' },
-      { text: 'Copilot', link: '/guide/copilot/' }
+      { text: 'Copilot guide', link: '/guide/copilot/' }
     ],
     sidebar: {
+      '/diagnose': [
+        {
+          text: '① Diagnose',
+          items: [
+            { text: 'Score your repo', link: '/diagnose' },
+            { text: 'Quick start (15 min)', link: '/start-here/quick-start' },
+            { text: 'Glossary', link: '/start-here/glossary' }
+          ]
+        }
+      ],
       '/start-here/': [
         {
-          text: 'Start Here',
+          text: '① Diagnose & start here',
           items: [
             { text: 'Home', link: '/' },
+            { text: 'Score your repo', link: '/diagnose' },
             { text: 'Quick start (15 min)', link: '/start-here/quick-start' },
             { text: 'Glossary', link: '/start-here/glossary' },
             { text: 'Setup: VS Code Copilot', link: '/start-here/setup-copilot' },
@@ -36,39 +58,33 @@ export default defineConfig({
       ],
       '/modules/': [
         {
-          text: 'Modules',
+          text: '② Learn',
           items: [
-            { text: 'Catalog', link: '/modules/' }
+            { text: 'Module catalog', link: '/modules/' }
           ]
         },
         {
-          text: 'Part 1 — Foundations',
+          text: 'Foundations',
           items: [
-            { text: '01 · Model vs environment', link: '/modules/m01-when-the-model-is-not-the-problem' },
-            { text: '02 · What a harness is', link: '/modules/m02-what-a-harness-really-is' },
-            { text: '03 · Five pillars', link: '/modules/m03-the-five-pillars' }
+            { text: 'F1 · When the model isn’t the problem', link: '/modules/f1-when-the-model-is-not-the-problem' },
+            { text: 'F2 · The harness & the scorecard', link: '/modules/f2-the-harness-and-the-scorecard' }
           ]
         },
         {
-          text: 'Part 2 — Workspace',
+          text: 'The five pillars',
           items: [
-            { text: '04 · Repo as memory', link: '/modules/m04-repo-as-source-of-truth' },
-            { text: '05 · Progressive instructions', link: '/modules/m05-progressive-instructions' },
-            { text: '06 · Session bootstrap', link: '/modules/m06-session-bootstrap' }
+            { text: 'P1 · 📜 Instructions', link: '/modules/p1-instructions' },
+            { text: 'P2 · 🧠 State', link: '/modules/p2-state' },
+            { text: 'P3 · ✅ Verification', link: '/modules/p3-verification' },
+            { text: 'P4 · 🎯 Scope', link: '/modules/p4-scope' },
+            { text: 'P5 · 🔁 Lifecycle', link: '/modules/p5-lifecycle' }
           ]
         },
         {
-          text: 'Part 3 — Reliability',
+          text: 'Operations',
           items: [
-            { text: '07 · State across sessions', link: '/modules/m07-state-across-sessions' },
-            { text: '08 · Scope & features', link: '/modules/m08-scope-and-feature-lists' },
-            { text: '09 · Verification gates', link: '/modules/m09-verification-gates' }
-          ]
-        },
-        {
-          text: 'Part 4 — Operations',
-          items: [
-            { text: '10 · Handoff & observability', link: '/modules/m10-observability-and-handoff' }
+            { text: 'O1 · Observability & handoff', link: '/modules/o1-observability-and-handoff' },
+            { text: 'O2 · Team rollout', link: '/modules/o2-team-rollout' }
           ]
         }
       ],
@@ -118,5 +134,15 @@ export default defineConfig({
       message: 'Copilot-first harness engineering — learn by building.',
       copyright: 'MIT License'
     }
+  },
+  mermaid: {
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#0b1220',
+      primaryTextColor: '#f1f5f9',
+      primaryBorderColor: '#22d3ee',
+      lineColor: '#818cf8',
+      fontFamily: 'DM Sans, system-ui, sans-serif'
+    }
   }
-})
+}))

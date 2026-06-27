@@ -106,6 +106,6 @@ Update PROGRESS.md when finished.
 
 ## Next step
 
-Read [M03 — The five pillars](../modules/m03-the-five-pillars), then try [Lab 01](../labs/lab-01-baseline-vs-harness).
+Read [M03 — The five pillars](../modules/f2-the-harness-and-the-scorecard), then try [Lab 01](../labs/lab-01-baseline-vs-harness).
 
 Or start with the [15-minute quick start](./quick-start).

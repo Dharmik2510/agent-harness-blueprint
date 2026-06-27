@@ -5,10 +5,31 @@
       "title": "Ship Agent Harness Blueprint v1.0",
       "status": "done",
       "acceptance": [
-        "10 modules published in docs/modules",
+        "Modules published in docs/modules",
         "6 labs with knowledge-hub app",
-        "Templates and validate-harness.sh work",
+        "Templates and harness validation work",
         "GitHub Pages deploy workflow present"
+      ]
+    },
+    {
+      "id": "scorecard-rebuild",
+      "title": "Measurable rebuild around the Harness Scorecard",
+      "status": "done",
+      "acceptance": [
+        "rubric.json is the single source for web quiz and CLI",
+        "harness-score CLI with tests; repo dogfoods at 100/100",
+        "Interactive /diagnose scorecard renders and links to lessons",
+        "Curriculum reorganized by the five pillars (F/P/O)",
+        "Mermaid diagrams render; docs:build and npm test are green in CI"
+      ]
+    },
+    {
+      "id": "publish-cli",
+      "title": "Publish harness-score to npm for npx usage",
+      "status": "open",
+      "acceptance": [
+        "Package published so `npx harness-score .` works for anyone",
+        "Docs updated to lead with the npx one-liner"
       ]
     }
   ]

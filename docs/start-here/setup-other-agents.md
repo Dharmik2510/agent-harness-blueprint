@@ -55,4 +55,4 @@ Copy optional mirror from [`templates/cursor/`](https://github.com/Dharmik2510/a
 
 ## Next step
 
-Continue with [M01 — When the model is not the problem](../modules/m01-when-the-model-is-not-the-problem) or jump to [Lab 01](../labs/lab-01-baseline-vs-harness) if you learn by doing.
+Continue with [M01 — When the model is not the problem](../modules/f1-when-the-model-is-not-the-problem) or jump to [Lab 01](../labs/lab-01-baseline-vs-harness) if you learn by doing.

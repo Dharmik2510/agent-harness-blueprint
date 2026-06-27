@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint src --max-warnings 0",
     "test": "vitest run",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "score": "node ../../scorecard/bin/harness-score.js ."
   },
   "dependencies": {
     "react": "^19.0.0",

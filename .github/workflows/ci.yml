@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main, harness-scorecard-rebuild]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Unit tests (scorecard CLI + rubric)
+        run: npm test
+      - name: Dogfood — this repo must stay a strong harness
+        run: npm run validate -- --min 80
+      - name: Docs build
+        run: npm run docs:build
