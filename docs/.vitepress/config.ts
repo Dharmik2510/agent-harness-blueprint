@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   vite: {
     resolve: {
       alias: {
@@ -132,5 +133,15 @@ export default defineConfig({
       message: 'Copilot-first harness engineering — learn by building.',
       copyright: 'MIT License'
     }
+  },
+  mermaid: {
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#0b1220',
+      primaryTextColor: '#f1f5f9',
+      primaryBorderColor: '#22d3ee',
+      lineColor: '#818cf8',
+      fontFamily: 'DM Sans, system-ui, sans-serif'
+    }
   }
-})
+}))

@@ -61,47 +61,21 @@ You can't improve what you don't measure. The **Harness Scorecard** grades any r
 npx --yes harness-score .
 ```
 
-## Pick your path
+## One path, four stages
 
-<div class="ahb-bento">
+This isn't a reading list — it's a measurable loop. Diagnose where you stand, learn the pillar that hurts, build it for real, then prove the gain.
 
-<a class="ahb-card" href="./start-here/quick-start">
-  <span class="ahb-pill">15 minutes</span>
-  <strong>Quick start</strong>
-  <span>Copy templates, run validate, fix your repo today.</span>
-</a>
+<Journey />
 
-<a class="ahb-card" href="./modules/">
-  <span class="ahb-pill">~8 hrs read</span>
-  <strong>Module track</strong>
-  <span>9 short chapters from “why agents fail” to full harness design.</span>
-</a>
+## The five pillars
 
-<a class="ahb-card" href="./labs/lab-01-baseline-vs-harness">
-  <span class="ahb-pill">Hands-on</span>
-  <strong>Lab track</strong>
-  <span>Build muscle memory on the Knowledge Hub app.</span>
-</a>
+Every score, module, and lab maps to these five. Click any pillar to jump to its chapter.
 
-<a class="ahb-card" href="./guide/copilot/">
-  <span class="ahb-pill">Copilot deep dive</span>
-  <strong>VS Code guide</strong>
-  <span>Instructions, agents, skills, hooks, and org rollout.</span>
-</a>
-
-</div>
+<Pillars />
 
 ## The Reliability Loop
 
-Most agent failures are not “bad model” problems. They are **missing systems** problems.
-
-<div class="ahb-pillars">
-  <div class="ahb-pillar"><div class="ahb-pillar-num">1</div><div class="ahb-pillar-label">Bootstrap</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">2</div><div class="ahb-pillar-label">Scope</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">3</div><div class="ahb-pillar-label">Build</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">4</div><div class="ahb-pillar-label">Verify</div></div>
-  <div class="ahb-pillar"><div class="ahb-pillar-num">5</div><div class="ahb-pillar-label">Handoff</div></div>
-</div>
+Most agent failures are not “bad model” problems. They are **missing systems** problems — a rhythm the agent repeats every session.
 
 ```mermaid
 flowchart LR
