@@ -4,11 +4,16 @@
   "private": true,
   "description": "Beginner harness engineering course with VS Code Copilot support",
   "type": "module",
+  "bin": {
+    "harness-score": "scorecard/bin/harness-score.js"
+  },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "validate": "bash scripts/validate-harness.sh .",
+    "score": "node scorecard/bin/harness-score.js",
+    "validate": "node scorecard/bin/harness-score.js .",
+    "test": "node --test scorecard/test/",
     "promo:gif": ".venv-promo/bin/python scripts/generate-promo-gif.py"
   },
   "devDependencies": {

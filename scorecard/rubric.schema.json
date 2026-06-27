@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HarnessRubric",
+  "type": "object",
+  "required": ["version", "maxScore", "pillars"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "maxScore": { "type": "integer", "minimum": 1 },
+    "bands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["min", "max", "label"],
+        "properties": {
+          "min": { "type": "integer" },
+          "max": { "type": "integer" },
+          "label": { "type": "string" },
+          "blurb": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pillars": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/pillar" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "pillar": {
+      "type": "object",
+      "required": ["id", "name", "max", "criteria"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "icon": { "type": "string" },
+        "max": { "type": "integer", "minimum": 1 },
+        "tagline": { "type": "string" },
+        "fixLink": { "type": "string" },
+        "criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/criterion" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "criterion": {
+      "type": "object",
+      "required": ["id", "points", "question", "detect"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "points": { "type": "integer", "minimum": 1 },
+        "question": { "type": "string" },
+        "detect": { "$ref": "#/$defs/detect" },
+        "fixLink": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "detect": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["file-exists", "file-exists-any", "file-contains", "file-line-max", "glob", "package-script", "any-of"] },
+        "path": { "type": "string" },
+        "paths": { "type": "array", "items": { "type": "string" } },
+        "pattern": { "type": "string" },
+        "flags": { "type": "string" },
+        "max": { "type": "integer" },
+        "script": { "type": "string" },
+        "rules": { "type": "array", "items": { "$ref": "#/$defs/detect" } }
+      },
+      "additionalProperties": false
+    }
+  }
+}

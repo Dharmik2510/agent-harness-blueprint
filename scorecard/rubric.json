@@ -1,0 +1,212 @@
+{
+  "$schema": "./rubric.schema.json",
+  "version": "1.0.0",
+  "title": "Harness Scorecard",
+  "description": "Score any repository against the five pillars of agent reliability. One rubric, two surfaces: the web Scorecard (self-report questions) and the harness-score CLI (detects real files).",
+  "maxScore": 100,
+  "bands": [
+    { "min": 0, "max": 39, "label": "Prompt-only", "blurb": "The agent is flying blind. Most failures here are missing-system problems, not model problems." },
+    { "min": 40, "max": 69, "label": "Partial harness", "blurb": "Some scaffolding exists, but gaps let the agent drift, forget, or claim done too early." },
+    { "min": 70, "max": 89, "label": "Reliable harness", "blurb": "Sessions finish the right task with proof. Polish the weak pillars to go further." },
+    { "min": 90, "max": 100, "label": "Production harness", "blurb": "A teammate-grade workspace. Agents stay on scope, verify, and hand off cleanly." }
+  ],
+  "pillars": [
+    {
+      "id": "instructions",
+      "name": "Instructions",
+      "icon": "📜",
+      "max": 20,
+      "tagline": "The agent knows your project, stack, and rules.",
+      "fixLink": "/modules/p1-instructions",
+      "criteria": [
+        {
+          "id": "inst-agents",
+          "points": 5,
+          "question": "Is there an AGENTS.md (or equivalent operating manual) at the repo root?",
+          "detect": { "type": "file-exists", "path": "AGENTS.md" },
+          "fixLink": "/modules/p1-instructions"
+        },
+        {
+          "id": "inst-tool-mirror",
+          "points": 5,
+          "question": "Is there a tool-specific instruction file (.github/copilot-instructions.md or CLAUDE.md)?",
+          "detect": { "type": "file-exists-any", "paths": [".github/copilot-instructions.md", "CLAUDE.md", ".cursor/rules"] },
+          "fixLink": "/start-here/setup-copilot"
+        },
+        {
+          "id": "inst-constraints",
+          "points": 5,
+          "question": "Do your instructions spell out hard constraints or conventions (must / never / do not)?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "constraint|convention|must|never|do not|don't", "flags": "i" },
+          "fixLink": "/modules/p1-instructions"
+        },
+        {
+          "id": "inst-concise",
+          "points": 5,
+          "question": "Are your instructions concise (roughly under 200 lines) and link out to deeper docs rather than inlining everything?",
+          "detect": { "type": "file-line-max", "path": "AGENTS.md", "max": 200 },
+          "fixLink": "/modules/p1-instructions"
+        }
+      ]
+    },
+    {
+      "id": "state",
+      "name": "State",
+      "icon": "🧠",
+      "max": 20,
+      "tagline": "Work survives the end of a chat window.",
+      "fixLink": "/modules/p2-state",
+      "criteria": [
+        {
+          "id": "state-progress",
+          "points": 5,
+          "question": "Is there a PROGRESS.md (or running log) that records what each session did?",
+          "detect": { "type": "file-exists-any", "paths": ["PROGRESS.md", "docs/PROGRESS.md"] },
+          "fixLink": "/modules/p2-state"
+        },
+        {
+          "id": "state-features",
+          "points": 5,
+          "question": "Is there a feature_list.json (or backlog file) tracking the work?",
+          "detect": { "type": "file-exists-any", "paths": ["feature_list.json", "docs/feature_list.json"] },
+          "fixLink": "/modules/p2-state"
+        },
+        {
+          "id": "state-handoff",
+          "points": 5,
+          "question": "Is there a SESSION_HANDOFF.md (or end-of-session note)?",
+          "detect": { "type": "file-exists-any", "paths": ["SESSION_HANDOFF.md", "docs/SESSION_HANDOFF.md"] },
+          "fixLink": "/modules/p5-lifecycle"
+        },
+        {
+          "id": "state-next",
+          "points": 5,
+          "question": "Does your state record the exact next step (so a fresh session knows where to resume)?",
+          "detect": { "type": "file-contains", "paths": ["PROGRESS.md", "SESSION_HANDOFF.md"], "pattern": "next|resume|pick up|exact next", "flags": "i" },
+          "fixLink": "/modules/p2-state"
+        }
+      ]
+    },
+    {
+      "id": "verification",
+      "name": "Verification",
+      "icon": "✅",
+      "max": 20,
+      "tagline": "\"Done\" means proven, not claimed.",
+      "fixLink": "/modules/p3-verification",
+      "criteria": [
+        {
+          "id": "verify-commands",
+          "points": 5,
+          "question": "Do your instructions list runnable verification commands (test / lint / build)?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "npm test|pytest|cargo test|go test|npm run (test|lint|build)|\\blint\\b|\\bverify\\b", "flags": "i" },
+          "fixLink": "/modules/p3-verification"
+        },
+        {
+          "id": "verify-gate-rule",
+          "points": 5,
+          "question": "Is there an explicit rule: do not claim done until verification passes?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "before claiming done|not (mark|claim).{0,30}done|until (tests|verification|checks).{0,20}pass|do not mark", "flags": "i" },
+          "fixLink": "/modules/p3-verification"
+        },
+        {
+          "id": "verify-tests",
+          "points": 5,
+          "question": "Does the project actually have a test setup (a test script or test files)?",
+          "detect": { "type": "any-of", "rules": [
+            { "type": "package-script", "script": "test" },
+            { "type": "glob", "pattern": "**/*.{test,spec}.{js,ts,jsx,tsx,py,go,rs}" },
+            { "type": "glob", "pattern": "**/test_*.py" }
+          ] },
+          "fixLink": "/modules/p3-verification"
+        },
+        {
+          "id": "verify-ci",
+          "points": 5,
+          "question": "Is there continuous integration that runs the checks (a CI workflow)?",
+          "detect": { "type": "glob", "pattern": ".github/workflows/*.{yml,yaml}" },
+          "fixLink": "/modules/p3-verification"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "name": "Scope",
+      "icon": "🎯",
+      "max": 20,
+      "tagline": "One feature at a time, with clear acceptance.",
+      "fixLink": "/modules/p4-scope",
+      "criteria": [
+        {
+          "id": "scope-status",
+          "points": 5,
+          "question": "Does your feature list track a status per item (open / in_progress / done)?",
+          "detect": { "type": "file-contains", "paths": ["feature_list.json", "docs/feature_list.json"], "pattern": "\"status\"", "flags": "i" },
+          "fixLink": "/modules/p4-scope"
+        },
+        {
+          "id": "scope-acceptance",
+          "points": 5,
+          "question": "Do features have explicit acceptance criteria (a definition of done)?",
+          "detect": { "type": "file-contains", "paths": ["feature_list.json", "docs/feature_list.json"], "pattern": "\"acceptance\"|acceptance criteria|definition of done", "flags": "i" },
+          "fixLink": "/modules/p4-scope"
+        },
+        {
+          "id": "scope-one-at-a-time",
+          "points": 5,
+          "question": "Is there a rule telling the agent to work on one feature/task at a time?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "one feature|one task|single feature|one at a time|stay in scope", "flags": "i" },
+          "fixLink": "/modules/p4-scope"
+        },
+        {
+          "id": "scope-scoped-rules",
+          "points": 5,
+          "question": "Do you scope rules to file patterns (e.g. .github/instructions/*.instructions.md with applyTo)?",
+          "detect": { "type": "any-of", "rules": [
+            { "type": "glob", "pattern": ".github/instructions/*.instructions.md" },
+            { "type": "file-contains", "paths": [".github/copilot-instructions.md"], "pattern": "applyTo", "flags": "i" }
+          ] },
+          "fixLink": "/modules/p4-scope"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "name": "Lifecycle",
+      "icon": "🔁",
+      "max": 20,
+      "tagline": "Every session starts and ends the same way.",
+      "fixLink": "/modules/p5-lifecycle",
+      "criteria": [
+        {
+          "id": "life-init",
+          "points": 5,
+          "question": "Is there a bootstrap script (scripts/init.sh or equivalent) to start a session cleanly?",
+          "detect": { "type": "file-exists-any", "paths": ["scripts/init.sh", "scripts/bootstrap.sh", "Makefile"] },
+          "fixLink": "/modules/p5-lifecycle"
+        },
+        {
+          "id": "life-workflow",
+          "points": 5,
+          "question": "Is the session workflow documented (start: bootstrap + read state; end: log + handoff)?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "session lifecycle|session workflow|init\\.sh|bootstrap|start:.*end:", "flags": "i" },
+          "fixLink": "/modules/p5-lifecycle"
+        },
+        {
+          "id": "life-handoff-ritual",
+          "points": 5,
+          "question": "Does your handoff doc have an actual checklist (not just a heading)?",
+          "detect": { "type": "file-contains", "paths": ["SESSION_HANDOFF.md", "PROGRESS.md"], "pattern": "- \\[ \\]|checklist|handoff", "flags": "i" },
+          "fixLink": "/modules/p5-lifecycle"
+        },
+        {
+          "id": "life-state-pointer",
+          "points": 5,
+          "question": "Do your instructions point the agent at PROGRESS.md / feature_list.json on startup?",
+          "detect": { "type": "file-contains", "paths": ["AGENTS.md", ".github/copilot-instructions.md", "CLAUDE.md"], "pattern": "PROGRESS|feature_list", "flags": "" },
+          "fixLink": "/modules/p5-lifecycle"
+        }
+      ]
+    }
+  ]
+}
